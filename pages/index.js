@@ -142,7 +142,9 @@ export default function Home() {
                 return (
                   <>
                     <Container css={{ maxWidth: 'fit-content', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
-                      <img key={image.url} src={image.url}></img>
+                      <a href={image.url} target="_blank" rel="noreferrer">
+                        <img key={image.url} src={image.url}></img>
+                      </a>
                       <Button color="success" onClick={() => copyToClipboard(image.url)}>
                         Copy URL
                       </Button>
